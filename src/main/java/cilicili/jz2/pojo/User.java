@@ -11,11 +11,13 @@ public class User implements Serializable {
 
     private String identity;
 
-    public User(Integer id, String username, String password, String identity) {
+    private Integer level;
+    public User(Integer id, String username, String password, String identity, Integer level) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.identity = identity;
+        this.level = level;
     }
 
     public User() {
@@ -52,5 +54,13 @@ public class User implements Serializable {
 
     public void setIdentity(String identity) {
         this.identity = identity == null ? null : identity.trim();
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }
